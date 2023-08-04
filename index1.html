@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .error{
+                color: red;
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="myId">
+        </div>
+        <form>
+            <input name="name" id="name" class="name" placeholder="Name" />
+            <div id="error" class="error"> Please provide your name</div>
+            <button type="button" onclick="checkNameValue()">Submit</button>
+        </form>
+        <script src="app.js"></script>
+        <script>
+            let myDiv = document.getElementById('myId')
+            myDiv.textContent = "Hello"
+
+            function checkNameValue(){
+                let name = document.getElementById('name').value
+                if(!name){
+                    document.getElementById('error').style.display = 'block'
+                }
+            }
+        </script>
+    </body>
+</html>
